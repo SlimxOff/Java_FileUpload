@@ -1,0 +1,15 @@
+<html xmlns:th="https://www.thymeleaf.org" lang="eng">
+<body>
+
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
+<div>
+    <form method="GET" enctype="multipart/form-data">
+        <li th:each="file : ${files}"></li>
+                <a><a type="submit" th:text="Download" th:href="${file}"/></a>
+    </form>
+</div>
+
+</body>
+</html>
